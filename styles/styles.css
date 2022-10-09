@@ -5,8 +5,11 @@
     --main-h-color: #212121;
     --main-acent-color: #2196F3;
     --contrast-text-h-color: #ffffff;
-    --main-logo-color: #000000
-}
+    --main-logo-color: #000000;
+    --accent-bgd-color: #2F303A;
+    --main-bgd-color:#F5F4FA;
+    }
+
 body {
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -19,19 +22,24 @@ body {
 .link {
     text-decoration: none;
     font-style:normal ;
-}    
-
+}   
+.link:hover, .link:focus {
+    color: var(--main-acent-color);
+} 
 .btn {
     font-family: inherit;
+    border: none;
+    cursor: pointer;
 }
-
+.btn:hover, .btn:focus {
+    background-color: var(--main-acent-color);
+    color: var(--contrast-text-h-color);
+}
 .title {
     color: var(--main-h-color);
 }
 
 /* header */
-
-
 
 .nav-item {
     font-weight: 500;
@@ -57,11 +65,14 @@ body {
 .nav-link{
     color: var(--main-h-color) ;
 }
+.current {
+    color: var(--main-acent-color);
+}
 
 .contacts-link {
-    text-decoration: none;
-    color: var(--main-text-color);
-}
+        color: var(--main-text-color);
+}   
+
 .contacts-list {
     list-style: none;
 }
@@ -86,75 +97,66 @@ body {
 
 }
 .hero-sec {
-    background-color: #2F303A;
+    background-color:var(--accent-bgd-color) ;
 }
 
 .hero-btn {
 font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color:var(--contrast-text-h-color);
-    background-color: var(--main-acent-color);
+    letter-spacing: 0.06em; 
 }
 
 /* section benefits */
-
-.benefits-list-title {
-font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+.benefits-sec {
     letter-spacing: 0.03em;
+    font-size: 14px;
+}
+.benefits-list-title {
+    font-weight: 700;
+    line-height: 1.14;
     text-transform: uppercase;
 }
 
 .benefits-list-item {
-    font-weight: 400;
-        font-size: 14px;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
+    line-height: 1.71;
 }
 
 /* section projects */
 
 .projects-title {
     font-weight: 700;
-        font-size: 36px;
-        line-height: 1.17;
-        text-align: center;
-        letter-spacing: 0.03em;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
 /* section team */
 
 .team-sec {
-    background-color: #F5F4FA;;
+    background-color: var(--main-bgd-color);
+    letter-spacing: 0.03em;
 }
 
 .team-title {
     font-weight: 700;
-        font-size: 36px;
-        line-height: 1.17;
-        text-align: center;
-        letter-spacing: 0.03em;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
 }
 
 .team-name {
     font-weight: 500;
-        font-size: 16px;
-        line-height: 1.19;
-        text-align: center;
-        letter-spacing: 0.03em;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
 }
 
 .team-position {
-    font-weight: 400;
-        font-size: 16px;
-        line-height: 1.19;
-        text-align: center;
-        letter-spacing: 0.03em;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
 }
 
 .team-item {
@@ -164,7 +166,6 @@ font-weight: 700;
 /* footer */
 
 .address-link {
-    font-weight: 400;
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
@@ -176,8 +177,30 @@ font-weight: 700;
 }
 
 .footer {
-    background-color: #2F303A;
+    background-color:var(--accent-bgd-color) ;
 }
 .logo-footer {
     color: var(--contrast-text-h-color);
 }
+
+/* portfolio page */
+.filter-btn {
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        letter-spacing: 0.03em;
+        background-color: var(--main-bgd-color);
+}
+
+.projects-list-title {
+    font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+}
+
+.projects-list-descr {
+        font-size: 16px;
+        line-height: 1.88;   
+        letter-spacing: 0.03em;}
